@@ -43,7 +43,7 @@ if sidemenu == 'Medal wise Analysis':
     if year_1 != 'Overall' and country_1 != 'Overall':
         st.subheader('Performance of '+country_1+' in '+str(year_1))
     medal_df = data_fun.medalwise(df,year_1,country_1)
-    st.table(medal_df)
+    st.dataframe(medal_df)
 
 if sidemenu == 'Overall Analysis': 
     editions = len(df.Year.unique())-1 # -1 is because of 1906 Intercalated Games
